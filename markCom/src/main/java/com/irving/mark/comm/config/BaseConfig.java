@@ -3,6 +3,7 @@ package com.irving.mark.comm.config;
 import java.io.Serializable;
 
 import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  * 一些基础的 配置信息类，用来序列化自己的配置文件
@@ -16,6 +17,6 @@ public class BaseConfig implements Serializable{
 
 	@Override
 	public String toString() {
-		return ToStringBuilder.reflectionToString(this);
+		return ToStringBuilder.reflectionToString(this, ToStringStyle.JSON_STYLE);
 	}
 }
